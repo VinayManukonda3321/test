@@ -1,0 +1,57 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<bean id="studentList"
+		class="com.rs.spring.ioc.collections.StudentList">
+		<property name="name" value="abc" />
+		<property name="id" value="1" />
+		<property name="studentData">
+			<list>
+				<value>60</value>
+				<value>80</value>
+				<value>90</value>
+				<value>70</value>
+				<value>50</value>
+				<value>70</value>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="studentSet"
+		class="com.rs.spring.ioc.collections.StudentSet">
+		<property name="name" value="abc" />
+		<property name="id" value="1" />
+		<property name="studentData">
+			<set>
+				<value>60</value>
+				<value>80</value>
+				<value>90</value>
+				<value>70</value>
+				<value>50</value>
+				<value>70</value>
+			</set>
+		</property>
+	</bean>
+
+	<bean id="studentMap" class="com.rs.spring.ioc.collections.StudentMap">
+		<property name="name" value="abc" />
+		<property name="id" value="1" />
+		<property name="data">
+			<map>
+				<entry key="k1">
+					<value>10</value>
+				</entry>
+				<entry key="k2">
+					<value>20</value>
+				</entry>
+				<entry key="k3">
+					<value>10.55</value>
+				</entry>
+			</map>
+		</property>
+
+	</bean>
+
+</beans>

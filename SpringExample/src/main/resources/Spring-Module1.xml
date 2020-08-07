@@ -1,0 +1,19 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<bean id="car" class="com.rs.spring.ioc.dependency.Car">
+
+		<property name="fuelType" value="Diesel" />
+		<property name="maxSpeed" value="100" />
+
+	</bean>
+
+	<bean id="bus" class="com.rs.spring.ioc.dependency.Bus">
+		<property name="maxSpeed" value="80" />
+	</bean>
+	
+	
+
+</beans>

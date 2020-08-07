@@ -1,0 +1,54 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<bean id="helloBean" class="com.mkyong.common.HelloWorld">
+		<property name="name" value="Mkyong" />
+	</bean>
+
+	<bean id="user" class="com.rs.spring.ioc.ex.User" autowire="byType" 
+		init-method="init" destroy-method="destroy">
+		<property name="name" value="admin" />
+		<property name="id" value="1" />
+		<property name="marks">
+			<list>
+				<value>60</value>
+				<value>80</value>
+				<value>90</value>
+				<value>70</value>
+				<value>50</value>
+				<value>70</value>
+			</list>
+		</property>
+
+		<!-- <property name="address" ref="address" /> -->
+		
+		<!-- <property name="address">
+			<ref local="address" />
+		</property> -->
+	</bean>
+
+	<bean id="address2" class="com.rs.spring.ioc.ex.Address">
+		<constructor-arg value="1" index="2" />
+		<constructor-arg value="2" index="0" />
+		<constructor-arg value="Vijayawada" index="1" />
+		
+		<property name="area" value="Bangalore" />
+	</bean>
+	
+	<bean id="student" class="com.rs.spring.ioc.collections.StudentSet">
+		<property name="name" value="abc" />
+		<property name="id" value="1" />
+		<property name="studentData">
+			<set>
+				<value>60</value>
+				<value>80</value>
+				<value>90</value>
+				<value>70</value>
+				<value>50</value>
+				<value>70</value>
+			</set>
+		</property>
+	</bean>
+</beans>

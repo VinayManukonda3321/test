@@ -1,0 +1,44 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+
+	<bean id="categories1"
+		class="com.rs.spring.autowiring.byname.Categories" autowire="byName">
+		<property name="name" value="General Books" />
+	</bean>
+	<bean id="bk1" class="com.rs.spring.autowiring.byname.Book">
+		<property name="bookname" value="The Kids" />
+		<property name="bookprice" value="100" />
+	</bean>
+
+	<bean id="categories2"
+		class="com.rs.spring.autowiring.bytype.Categories" autowire="byType">
+		<property name="name" value="General Books" />
+	</bean>
+	<bean id="bk2" class="com.rs.spring.autowiring.bytype.Book">
+		<property name="bookname" value="The Kids" />
+		<property name="bookprice" value="200" />
+	</bean>
+
+	<bean id="categories3"
+		class="com.rs.spring.autowiring.byconstructor.Categories"
+		autowire="constructor">
+		<property name="name" value="General Books" />
+	</bean>
+	<bean id="bk3" class="com.rs.spring.autowiring.byconstructor.Book">
+		<property name="bookname" value="The Kids" />
+		<property name="bookprice" value="300" />
+	</bean>
+	
+	<bean id="categories4"
+		class="com.rs.spring.autowiring.byautodetect.Categories" autowire="autodetect">
+		<property name="name" value="General Books" />
+	</bean>
+	<bean id="bk4" class="com.rs.spring.autowiring.byautodetect.Book">
+		<property name="bookname" value="The Kids" />
+		<property name="bookprice" value="400" />
+	</bean>
+
+</beans>
