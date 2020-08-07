@@ -20,8 +20,7 @@ public class App
         
         obj.printHello();
         
-        obj = (HelloWorld) context.getBean("helloBean");
-        System.out.println(obj.hashCode());
+       
         
         obj.printHello();
         
